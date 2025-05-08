@@ -1,0 +1,217 @@
+/* Секция обзора услуг */
+.services-overview {
+  background-color: var(--color-white);
+  padding: 80px 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+.service-item {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-gray-light);
+  transition: all 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary);
+}
+
+.service-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  margin-bottom: 30px;
+}
+
+.service-title {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.service-description {
+  color: var(--color-gray-dark);
+  margin-bottom: 24px;
+  line-height: 1.7;
+}
+
+.service-features {
+  margin-bottom: 30px;
+}
+
+.service-features li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 12px;
+  color: var(--color-gray-dark);
+}
+
+.service-features li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+/* Секция членства */
+.membership-section {
+  background-color: var(--color-light);
+  padding: 80px 0;
+}
+
+.membership-plans {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.plan-card {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-md);
+}
+
+.plan-card.featured {
+  border: 2px solid var(--color-primary);
+  transform: scale(1.05);
+  z-index: 2;
+}
+
+.plan-card.featured:hover {
+  transform: scale(1.05) translateY(-10px);
+}
+
+.plan-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.plan-header {
+  padding: 30px;
+  text-align: center;
+  border-bottom: 1px solid var(--color-gray-light);
+}
+
+.plan-name {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.plan-price {
+  font-size: 18px;
+  color: var(--color-gray-dark);
+}
+
+.price-amount {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--color-secondary);
+}
+
+.plan-features {
+  padding: 30px;
+}
+
+.plan-features ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.plan-features li {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-gray-light);
+  position: relative;
+  padding-left: 30px;
+}
+
+.plan-features li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.plan-features li.not-available {
+  color: var(--color-gray);
+  text-decoration: line-through;
+}
+
+.plan-features li.not-available:before {
+  content: "✕";
+  color: var(--color-gray);
+}
+
+.plan-footer {
+  padding: 0 30px 30px;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .membership-plans {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .plan-card.featured {
+    transform: scale(1);
+  }
+  
+  .plan-card.featured:hover {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+  .service-item {
+    padding: 30px 20px;
+  }
+  
+  .service-icon {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .service-title {
+    font-size: 20px;
+  }
+}

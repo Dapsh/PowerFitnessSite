@@ -1,0 +1,216 @@
+/* Секция история */
+.story-section {
+  background-color: var(--color-white);
+  padding: 80px 0;
+}
+
+.story-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.story-image img {
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-text p {
+  margin-bottom: 20px;
+  color: var(--color-gray-dark);
+}
+
+/* Секция миссия */
+.vision-section {
+  background-color: var(--color-light);
+  padding: 80px 0;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.value-card {
+  background-color: var(--color-white);
+  padding: 30px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-md);
+}
+
+.value-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  margin: 0 auto 24px;
+}
+
+.value-title {
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.value-description {
+  color: var(--color-gray-dark);
+  font-size: 15px;
+}
+
+/* Секция оборудование */
+.equipment-section {
+  background-color: var(--color-white);
+  padding: 80px 0;
+}
+
+.equipment-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.equipment-features {
+  margin: 24px 0;
+}
+
+.equipment-features li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  color: var(--color-gray-dark);
+}
+
+.equipment-features li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.equipment-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.gallery-item {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  height: 200px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* Секция команда */
+.team-section {
+  background-color: var(--color-light);
+  padding: 80px 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.team-member {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-md);
+}
+
+.member-image {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.member-info {
+  padding: 20px;
+}
+
+.member-name {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.member-role {
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.member-bio {
+  color: var(--color-gray-dark);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+@media (max-width: 992px) {
+  .story-content,
+  .equipment-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .story-image,
+  .equipment-gallery {
+    order: -1;
+  }
+  
+  .values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .equipment-gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .gallery-item {
+    height: 250px;
+  }
+}
+
+@media (max-width: 576px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
